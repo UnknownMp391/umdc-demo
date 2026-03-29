@@ -1,0 +1,188 @@
+---
+import materialDynamicColors from "material-dynamic-colors";
+
+const colors = await materialDynamicColors('#ffd700')
+
+const lightPrimary = colors.light.primary
+const lightOnPrimary = colors.light.onPrimary
+const lightPrimaryContainer = colors.light.primaryContainer
+const lightOnPrimaryContainer = colors.light.onPrimaryContainer
+const lightSecondary = colors.light.secondary
+const lightOnSecondary = colors.light.onSecondary
+const lightSecondaryContainer = colors.light.secondaryContainer
+const lightOnSecondaryContainer = colors.light.onSecondaryContainer
+const lightTertiary = colors.light.tertiary
+const lightOnTertiary = colors.light.onTertiary
+const lightTertiaryContainer = colors.light.tertiaryContainer
+const lightOnTertiaryContainer = colors.light.onTertiaryContainer
+const lightError = colors.light.error
+const lightOnError = colors.light.onError
+const lightErrorContainer = colors.light.errorContainer
+const lightOnErrorContainer = colors.light.onErrorContainer
+const lightBackground = colors.light.background
+const lightOnBackground = colors.light.onBackground
+const lightSurface = colors.light.surface
+const lightOnSurface = colors.light.onSurface
+const lightSurfaceVariant = colors.light.surfaceVariant
+const lightOnSurfaceVariant = colors.light.onSurfaceVariant
+const lightOutline = colors.light.outline
+const lightOutlineVariant = colors.light.outlineVariant
+const lightShadow = colors.light.shadow
+const lightScrim = colors.light.scrim
+const lightInverseSurface = colors.light.inverseSurface
+const lightInverseOnSurface = colors.light.inverseOnSurface
+const lightInversePrimary = colors.light.inversePrimary
+const lightSurfaceDim = colors.light.surfaceDim
+const lightSurfaceBright = colors.light.surfaceBright
+const lightSurfaceContainerLowest = colors.light.surfaceContainerLowest
+const lightSurfaceContainerLow = colors.light.surfaceContainerLow
+const lightSurfaceContainer = colors.light.surfaceContainer
+const lightSurfaceContainerHigh = colors.light.surfaceContainerHigh
+const lightSurfaceContainerHighest = colors.light.surfaceContainerHighest
+
+const darkPrimary = colors.dark.primary
+const darkOnPrimary = colors.dark.onPrimary
+const darkPrimaryContainer = colors.dark.primaryContainer
+const darkOnPrimaryContainer = colors.dark.onPrimaryContainer
+const darkSecondary = colors.dark.secondary
+const darkOnSecondary = colors.dark.onSecondary
+const darkSecondaryContainer = colors.dark.secondaryContainer
+const darkOnSecondaryContainer = colors.dark.onSecondaryContainer
+const darkTertiary = colors.dark.tertiary
+const darkOnTertiary = colors.dark.onTertiary
+const darkTertiaryContainer = colors.dark.tertiaryContainer
+const darkOnTertiaryContainer = colors.dark.onTertiaryContainer
+const darkError = colors.dark.error
+const darkOnError = colors.dark.onError
+const darkErrorContainer = colors.dark.errorContainer
+const darkOnErrorContainer = colors.dark.onErrorContainer
+const darkBackground = colors.dark.background
+const darkOnBackground = colors.dark.onBackground
+const darkSurface = colors.dark.surface
+const darkOnSurface = colors.dark.onSurface
+const darkSurfaceVariant = colors.dark.surfaceVariant
+const darkOnSurfaceVariant = colors.dark.onSurfaceVariant
+const darkOutline = colors.dark.outline
+const darkOutlineVariant = colors.dark.outlineVariant
+const darkShadow = colors.dark.shadow
+const darkScrim = colors.dark.scrim
+const darkInverseSurface = colors.dark.inverseSurface
+const darkInverseOnSurface = colors.dark.inverseOnSurface
+const darkInversePrimary = colors.dark.inversePrimary
+const darkSurfaceDim = colors.dark.surfaceDim
+const darkSurfaceBright = colors.dark.surfaceBright
+const darkSurfaceContainerLowest = colors.dark.surfaceContainerLowest
+const darkSurfaceContainerLow = colors.dark.surfaceContainerLow
+const darkSurfaceContainer = colors.dark.surfaceContainer
+const darkSurfaceContainerHigh = colors.dark.surfaceContainerHigh
+const darkSurfaceContainerHighest = colors.dark.surfaceContainerHighest
+
+import '../styles/classes/md-typescales.scss'
+---
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body class="md-light">
+    <header></header>
+    <main><slot></slot></main>
+    <footer></footer>
+  </body>
+</html>
+
+<style lang="scss" define:vars={{
+  lightPrimary,
+  darkPrimary,
+  lightOnPrimary,
+  darkOnPrimary,
+  lightPrimaryContainer,
+  darkPrimaryContainer,
+  lightOnPrimaryContainer,
+  darkOnPrimaryContainer,
+  lightSecondary,
+  darkSecondary,
+  lightOnSecondary,
+  darkOnSecondary,
+  lightSecondaryContainer,
+  darkSecondaryContainer,
+  lightOnSecondaryContainer,
+  darkOnSecondaryContainer,
+  lightTertiary,
+  darkTertiary,
+  lightOnTertiary,
+  darkOnTertiary,
+  lightTertiaryContainer,
+  darkTertiaryContainer,
+  lightOnTertiaryContainer,
+  darkOnTertiaryContainer,
+  lightError,
+  darkError,
+  lightOnError,
+  darkOnError,
+  lightErrorContainer,
+  darkErrorContainer,
+  lightOnErrorContainer,
+  darkOnErrorContainer,
+  lightBackground,
+  darkBackground,
+  lightOnBackground,
+  darkOnBackground,
+  lightSurface,
+  darkSurface,
+  lightOnSurface,
+  darkOnSurface,
+  lightSurfaceVariant,
+  darkSurfaceVariant,
+  lightOnSurfaceVariant,
+  darkOnSurfaceVariant,
+  lightOutline,
+  darkOutline,
+  lightOutlineVariant,
+  darkOutlineVariant,
+  lightShadow,
+  darkShadow,
+  lightScrim,
+  darkScrim,
+  lightInverseSurface,
+  darkInverseSurface,
+  lightInverseOnSurface,
+  darkInverseOnSurface,
+  lightInversePrimary,
+  darkInversePrimary,
+  lightSurfaceDim,
+  darkSurfaceDim,
+  lightSurfaceBright,
+  darkSurfaceBright,
+  lightSurfaceContainerLowest,
+  darkSurfaceContainerLowest,
+  lightSurfaceContainerLow,
+  darkSurfaceContainerLow,
+  lightSurfaceContainer,
+  darkSurfaceContainer,
+  lightSurfaceContainerHigh,
+  darkSurfaceContainerHigh,
+  lightSurfaceContainerHighest,
+  darkSurfaceContainerHighest
+}}>
+@use '../styles/md-snippets';
+@use '../styles/md-colors';
+
+html {
+  @include md-snippets.vars-root-astro;
+
+  body {
+    @include md-snippets.theme-classes;
+    @include md-snippets.const-vars-typefaces;
+    @include md-snippets.const-vars-typescales;
+    @include md-snippets.const-vars-shapes;
+
+    @include md-colors.background;
+  }
+}
+</style>

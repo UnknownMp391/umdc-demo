@@ -1,0 +1,106 @@
+---
+
+const { size = 'small' } = Astro.props;
+
+export interface Props {
+  size?: 'small' | 'medium' | 'large';
+  disabled?: boolean;
+}
+---
+<button class="button" class:list={[ size ]} {...Astro.props}>
+  <slot></slot>
+</button>
+
+<style lang="scss">
+  @use '../../../styles/md-colors';
+  @use '../../../styles/md-typescales';
+  @use '../../../styles/md-shapes';
+
+  .button {
+    outline: 0;
+    border: 0px;
+
+    position: relative;
+
+    @include md-colors.primary;
+
+    // @include md-shapes.corner-full;
+
+    transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+
+    &:active {
+      @include md-shapes.corner-small;
+    }
+
+    &:disabled {
+      pointer-events: none;
+
+      background-color: color-mix(in srgb, var(--md-sys-color-on-surface) 10%, var(--md-sys-color-surface));
+      color: color-mix(in srgb, var(--md-sys-color-on-surface) 38%, var(--md-sys-color-surface));
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  .button::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background-color: var(--md-sys-color-on-primary);
+    opacity: 0;
+
+    content: '';
+  }
+
+  .button:hover::before {
+    opacity: 0.08;
+  }
+
+  .button:active::before {
+    opacity: 0.1;
+  }
+
+  .small {
+    height: 40px;
+
+    padding: 0px 24px 0px 24px;
+
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.1px;
+    font-weight: var(--md-ref-typeface-weight-medium);
+
+    border-radius: 20px;
+  }
+
+  .medium {
+    height: 56px;
+
+    padding: 0px 24px 0px 24px;
+
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+    font-weight: var(--md-ref-typeface-weight-medium);
+
+    border-radius: 28px;
+  }
+
+  .large {
+    height: 96px;
+
+    padding: 0px 48px 0px 48px;
+
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0;
+    font-weight: var(--md-ref-typeface-weight-regular);
+
+    border-radius: 48px;
+  }
+</style>

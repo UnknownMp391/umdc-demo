@@ -1,0 +1,62 @@
+@use '../md-typescales';
+
+.md-typescale-display-small {
+  @include md-typescales.display-small;
+}
+
+.md-typescale-display-medium {
+  @include md-typescales.display-medium;
+}
+
+.md-typescale-display-large {
+  @include md-typescales.display-large;
+}
+
+.md-typescale-headline-small {
+  @include md-typescales.headline-small;
+}
+
+.md-typescale-headline-medium {
+  @include md-typescales.headline-medium;
+}
+
+.md-typescale-headline-large {
+  @include md-typescales.headline-large;
+}
+
+.md-typescale-title-small {
+  @include md-typescales.title-small;
+}
+
+.md-typescale-title-medium {
+  @include md-typescales.title-medium;
+}
+
+.md-typescale-title-large {
+  @include md-typescales.title-large;
+}
+
+.md-typescale-body-small {
+  @include md-typescales.body-small;
+}
+
+.md-typescale-body-medium {
+  @include md-typescales.body-medium;
+}
+
+.md-typescale-body-large {
+  @include md-typescales.body-large;
+}
+
+.md-typescale-label-small {
+  @include md-typescales.label-small;
+}
+
+.md-typescale-label-medium {
+  @include md-typescales.label-medium;
+}
+
+.md-typescale-label-large {
+  @include md-typescales.label-large;
+}
+

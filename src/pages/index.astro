@@ -1,0 +1,120 @@
+---
+import Layout from '../layouts/Layout.astro';
+import FilledButton from '../components/md/button/FilledButton.astro'
+---
+
+<Layout>
+  <div class="md-typescale-display-large">Display Large</div>
+  <div class="md-typescale-display-medium">Display Medium</div>
+  <div class="md-typescale-display-small">Display Small</div>
+
+  <hr/>
+
+  <div class="md-typescale-headline-large">Headline Large</div>
+  <div class="md-typescale-headline-medium">Headline Medium</div>
+  <div class="md-typescale-headline-small">Headline Small</div>
+
+  <hr/>
+
+  <div class="md-typescale-title-large">Title Large</div>
+  <div class="md-typescale-title-medium">Title Medium</div>
+  <div class="md-typescale-title-small">Title Small</div>
+
+  <hr/>
+
+  <div class="md-typescale-body-large">Body Large</div>
+  <div class="md-typescale-body-medium">Body Medium</div>
+  <div class="md-typescale-body-small">Body Small</div>
+
+  <hr/>
+
+  <div class="md-typescale-label-large">Label Large</div>
+  <div class="md-typescale-label-medium">Label Medium</div>
+  <div class="md-typescale-label-small">Label Small</div>
+
+  <hr/>
+
+  <div class="block corner-none">None</div>
+
+  <hr/>
+
+  <div class="block corner-extra-small">Extra Small</div>
+
+  <hr/>
+
+  <div class="block corner-small">Small</div>
+
+  <hr/>
+
+  <div class="block corner-medium">Medium</div>
+
+  <hr/>
+
+  <div class="block corner-large">Large</div>
+
+  <hr/>
+
+  <div class="block corner-extra-large">Extra Large</div>
+
+  <hr/>
+
+  <div class="block corner-full">Full</div>
+
+  <hr/>
+
+  <FilledButton size='small'>Content</FilledButton>
+  <FilledButton size='small' disabled>Content</FilledButton>
+
+  <br/>
+
+  <FilledButton size='medium'>Content</FilledButton>
+  <FilledButton size='medium' disabled>Content</FilledButton>
+
+  <br/>
+
+  <FilledButton size='large'>Content</FilledButton>
+  <FilledButton size='large' disabled>Content</FilledButton>
+</Layout>
+
+<style lang="scss">
+  @use '../styles/md-colors';
+  @use '../styles/md-typescales';
+  @use '../styles/md-shapes';
+
+  div.block {
+    width: 96px;
+    height: 96px;
+
+    @include md-colors.tertiary-container;
+  }
+
+  div.corner {
+    &-none {
+      @include md-shapes.corner-none;
+    }
+
+    &-extra-small {
+      @include md-shapes.corner-extra-small;
+    }
+
+    &-small {
+      @include md-shapes.corner-small;
+    }
+
+    &-medium {
+      @include md-shapes.corner-medium;
+    }
+
+    &-large {
+      @include md-shapes.corner-large;
+    }
+
+    &-extra-large {
+      @include md-shapes.corner-extra-large;
+    }
+
+    &-full {
+      @include md-shapes.corner-full;
+    }
+  }
+</style>
