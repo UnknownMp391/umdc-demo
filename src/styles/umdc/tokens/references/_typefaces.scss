@@ -1,0 +1,15 @@
+@mixin fonts {
+  --md-ref-typeface-brand: sans-serif;
+  --md-ref-typeface-plain: sans-serif;
+}
+
+@mixin font-weights {
+  --md-ref-typeface-weight-bold: 600;// ?
+  --md-ref-typeface-weight-medium: 500;
+  --md-ref-typeface-weight-regular: 400;
+}
+
+@mixin all {
+  @include fonts;
+  @include font-weights;
+}

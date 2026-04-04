@@ -77,7 +77,7 @@ const darkSurfaceContainer = colors.dark.surfaceContainer
 const darkSurfaceContainerHigh = colors.dark.surfaceContainerHigh
 const darkSurfaceContainerHighest = colors.dark.surfaceContainerHighest
 
-import '../styles/classes/md-typescales.scss'
+import '../styles/umdc/classes/typescales.scss'
 ---
 
 <html>
@@ -170,17 +170,23 @@ import '../styles/classes/md-typescales.scss'
   lightSurfaceContainerHighest,
   darkSurfaceContainerHighest
 }}>
-@use '../styles/md-snippets';
-@use '../styles/md-colors';
+@use '../styles/umdc/snippets' as md-snippets;
+@use '../styles/umdc/colors' as md-colors;
+@use '../styles/umdc/tokens/main' as md-tokens;
+@use '../styles/umdc/themes' as md-themes;
 
 html {
-  @include md-snippets.vars-root-astro;
+  @include md-snippets.color-vars-adapter-astro;
 
   body {
-    @include md-snippets.theme-classes;
-    @include md-snippets.const-vars-typefaces;
-    @include md-snippets.const-vars-typescales;
-    @include md-snippets.const-vars-shapes;
+    &.md-light {
+      @include md-themes.light;
+    }
+    &.md-dark {
+      @include md-themes.dark;
+    }
+
+    @include md-tokens.all;
 
     @include md-colors.background;
   }

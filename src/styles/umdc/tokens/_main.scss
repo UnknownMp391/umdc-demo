@@ -1,0 +1,28 @@
+@use './references/typefaces';
+@use './system/typescales';
+@use './system/elevations';
+@use './system/shapes';
+@use './system/transitions';
+
+@use './components/button';
+
+@mixin references {
+  @include typefaces.all;
+}
+
+@mixin system {
+  @include typescales.all;
+  @include elevations.all;
+  @include shapes.all;
+  @include transitions.all;
+}
+
+@mixin components {
+  @include button.all;
+}
+
+@mixin all {
+  @include references;
+  @include system;
+  @include components;
+}

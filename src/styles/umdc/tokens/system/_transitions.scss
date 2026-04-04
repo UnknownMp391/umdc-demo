@@ -1,0 +1,14 @@
+@mixin durations {
+  --md-sys-transition-duration-short: 150ms;
+  --md-sys-transition-duration-medium: 300ms;
+  --md-sys-transition-duration-long: 500ms;
+}
+
+@mixin easings {
+
+}
+
+@mixin all {
+  @include durations;
+  @include easings;
+}

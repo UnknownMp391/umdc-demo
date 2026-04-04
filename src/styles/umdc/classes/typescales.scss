@@ -1,4 +1,4 @@
-@use '../md-typescales';
+@use '../typescales' as md-typescales;
 
 .md-typescale-display-small {
   @include md-typescales.display-small;

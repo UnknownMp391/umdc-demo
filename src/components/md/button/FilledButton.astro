@@ -12,21 +12,21 @@ export interface Props {
 </button>
 
 <style lang="scss">
-  @use '../../../styles/md-colors';
-  @use '../../../styles/md-typescales';
-  @use '../../../styles/md-shapes';
+  @use '../../../styles/umdc/colors' as md-colors;
+  @use '../../../styles/umdc/typescales' as md-typescales;
+  @use '../../../styles/umdc/shapes' as md-shapes;
+  @use '../../../styles/umdc/transitions' as md-transitions;
 
   .button {
     outline: 0;
     border: 0px;
-
     position: relative;
 
-    @include md-colors.primary;
+    @include md-transitions.button;
 
-    // @include md-shapes.corner-full;
-
-    transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+    color: var(--md-comp-button-filled-label-text-color);
+    background-color: var(--md-comp-button-filled-container-color);
+    box-shadow: var(--md-comp-button-filled-container-elevation);
 
     &:active {
       @include md-shapes.corner-small;
@@ -35,8 +35,8 @@ export interface Props {
     &:disabled {
       pointer-events: none;
 
-      background-color: color-mix(in srgb, var(--md-sys-color-on-surface) 10%, var(--md-sys-color-surface));
-      color: color-mix(in srgb, var(--md-sys-color-on-surface) 38%, var(--md-sys-color-surface));
+      background-color: color-mix(in srgb, var(--md-sys-color-on-surface) 10%, transparent);
+      color: color-mix(in srgb, var(--md-sys-color-on-surface) 38%, transparent);
 
       &::before {
         display: none;
@@ -58,11 +58,13 @@ export interface Props {
   }
 
   .button:hover::before {
-    opacity: 0.08;
+    background-color: var(--md-comp-button-filled-hovered-state-layer-color);
+    opacity: var(--md-comp-button-filled-hovered-state-layer-opacity);
   }
 
   .button:active::before {
-    opacity: 0.1;
+    background-color: var(--md-comp-button-filled-pressed-state-layer-color);
+    opacity: var(--md-comp-button-filled-pressed-state-layer-opacity);
   }
 
   .small {

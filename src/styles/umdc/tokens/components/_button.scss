@@ -1,0 +1,29 @@
+@use '../../colors' as md-colors;
+@use '../../typescales' as md-typescales;
+@use '../../shapes' as md-shapes;
+
+
+@mixin filled-colors {
+  --md-comp-button-filled-container-color: var(--md-sys-color-primary);
+  --md-comp-button-filled-container-elevation: var(--md-sys-elevation-level0);
+  --md-comp-button-filled-label-text-color: var(--md-sys-color-on-primary);
+
+  --md-comp-button-filled-disabled-container-color: var(--md-sys-color-on-surface);
+  --md-comp-button-filled-disabled-container-opacity: 0.1;
+  --md-comp-button-filled-disabled-container-elevation: var(--md-sys-elevation-level0);
+  --md-comp-button-filled-disabled-label-text-color: var(--md-sys-color-on-surface);
+  --md-comp-button-filled-disabled-label-text-opacity: 0.38;
+
+  --md-comp-button-filled-hovered-state-layer-color: var(--md-sys-color-on-primary);
+  --md-comp-button-filled-hovered-state-layer-opacity: 0.08;
+
+  --md-comp-button-filled-focused-state-layer-color: var(--md-sys-color-on-primary);
+  --md-comp-button-filled-focused-state-layer-opacity: 0.1;
+
+  --md-comp-button-filled-pressed-state-layer-color: var(--md-sys-color-on-primary);
+  --md-comp-button-filled-pressed-state-layer-opacity: 0.1;
+}
+
+@mixin all {
+  @include filled-colors;
+}

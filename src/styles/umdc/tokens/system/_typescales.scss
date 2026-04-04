@@ -1,0 +1,137 @@
+@mixin display-small {
+  --md-sys-typescale-display-small-font: var(--md-sys-typescale-font);
+  --md-sys-typescale-display-small-size: 2.25rem;
+  --md-sys-typescale-display-small-line-height: 2.75rem;
+  --md-sys-typescale-display-small-tracking: 0;
+  --md-sys-typescale-display-small-weight: --md-ref-typeface-weight-regular;
+}
+
+@mixin display-medium {
+  --md-sys-typescale-display-medium-font: var(--md-sys-typescale-font);
+  --md-sys-typescale-display-medium-size: 2.8125rem;
+  --md-sys-typescale-display-medium-line-height: 3.25rem;
+  --md-sys-typescale-display-medium-tracking: 0;
+  --md-sys-typescale-display-medium-weight: --md-ref-typeface-weight-regular
+}
+
+@mixin display-large {
+  --md-sys-typescale-display-large-font: var(--md-sys-typescale-font);
+  --md-sys-typescale-display-large-size: 3.5625rem;
+  --md-sys-typescale-display-large-line-height: 4rem;
+  --md-sys-typescale-display-large-tracking: -0.015625rem;
+  --md-sys-typescale-display-large-weight: --md-ref-typeface-weight-regular;
+}
+
+@mixin headline-small {
+  --md-sys-typescale-headline-small-font: var(--md-sys-typescale-font);
+  --md-sys-typescale-headline-small-size: 1.5rem;
+  --md-sys-typescale-headline-small-line-height: 2rem;
+  --md-sys-typescale-headline-small-tracking: 0;
+  --md-sys-typescale-headline-small-weight: --md-ref-typeface-weight-regular;
+}
+
+@mixin headline-medium {
+  --md-sys-typescale-headline-medium-font: var(--md-sys-typescale-font);
+  --md-sys-typescale-headline-medium-size: 1.75rem;
+  --md-sys-typescale-headline-medium-line-height: 2.25rem;
+  --md-sys-typescale-headline-medium-tracking: 0;
+  --md-sys-typescale-headline-medium-weight: --md-ref-typeface-weight-regular;
+}
+
+@mixin headline-large {
+  --md-sys-typescale-headline-large-font: var(--md-sys-typescale-font);
+  --md-sys-typescale-headline-large-size: 2rem;
+  --md-sys-typescale-headline-large-line-height: 2.5rem;
+  --md-sys-typescale-headline-large-tracking: 0;
+  --md-sys-typescale-headline-large-weight: --md-ref-typeface-weight-regular;
+}
+
+@mixin title-small {
+  --md-sys-typescale-title-small-font: var(--md-sys-typescale-font);
+  --md-sys-typescale-title-small-size: 0.875rem;
+  --md-sys-typescale-title-small-line-height: 1.25rem;
+  --md-sys-typescale-title-small-tracking: 0.00625rem;
+  --md-sys-typescale-title-small-weight: --md-ref-typeface-weight-medium;
+}
+
+@mixin title-medium {
+  --md-sys-typescale-title-medium-font: var(--md-sys-typescale-font);
+  --md-sys-typescale-title-medium-size: 1rem;
+  --md-sys-typescale-title-medium-line-height: 1.5rem;
+  --md-sys-typescale-title-medium-tracking: 0.009375rem;
+  --md-sys-typescale-title-medium-weight: --md-ref-typeface-weight-medium;
+}
+
+@mixin title-large {
+  --md-sys-typescale-title-large-font: var(--md-sys-typescale-font);
+  --md-sys-typescale-title-large-size: 1.375rem;
+  --md-sys-typescale-title-large-line-height: 1.75rem;
+  --md-sys-typescale-title-large-tracking: 0;
+  --md-sys-typescale-title-large-weight: --md-ref-typeface-weight-medium;
+}
+
+@mixin body-small {
+  --md-sys-typescale-body-small-font: var(--md-sys-typescale-font);
+  --md-sys-typescale-body-small-size: 0.75rem;
+  --md-sys-typescale-body-small-line-height: 1rem;
+  --md-sys-typescale-body-small-tracking: 0.025rem;
+  --md-sys-typescale-body-small-weight: --md-ref-typeface-weight-regular;
+}
+
+@mixin body-medium {
+  --md-sys-typescale-body-medium-font: var(--md-sys-typescale-font);
+  --md-sys-typescale-body-medium-size: 0.875rem;
+  --md-sys-typescale-body-medium-line-height: 1.25rem;
+  --md-sys-typescale-body-medium-tracking: 0.015625rem;
+  --md-sys-typescale-body-medium-weight: --md-ref-typeface-weight-regular;
+}
+
+@mixin body-large {
+  --md-sys-typescale-body-large-font: var(--md-sys-typescale-font);
+  --md-sys-typescale-body-large-size: 1rem;
+  --md-sys-typescale-body-large-line-height: 1.5rem;
+  --md-sys-typescale-body-large-tracking: 0.003125rem;
+  --md-sys-typescale-body-large-weight: --md-ref-typeface-weight-regular;
+}
+
+@mixin label-small {
+  --md-sys-typescale-label-small-font: var(--md-sys-typescale-font);
+  --md-sys-typescale-label-small-size: 0.6875rem;
+  --md-sys-typescale-label-small-line-height: 1rem;
+  --md-sys-typescale-label-small-tracking: 0.03125rem;
+  --md-sys-typescale-label-small-weight: --md-ref-typeface-weight-medium;
+}
+
+@mixin label-medium {
+  --md-sys-typescale-label-medium-font: var(--md-sys-typescale-font);
+  --md-sys-typescale-label-medium-size: 1rem;
+  --md-sys-typescale-label-medium-line-height: 0.75rem;
+  --md-sys-typescale-label-medium-tracking: 0.03125rem;
+  --md-sys-typescale-label-medium-weight: --md-ref-typeface-weight-medium;
+}
+
+@mixin label-large {
+  --md-sys-typescale-label-large-font: var(--md-sys-typescale-font);
+  --md-sys-typescale-label-large-size: 0.875rem;
+  --md-sys-typescale-label-large-line-height: 1.25rem;
+  --md-sys-typescale-label-large-tracking: 0.00625rem;
+  --md-sys-typescale-label-large-weight: --md-ref-typeface-weight-medium;
+}
+
+@mixin all {
+  @include display-small;
+  @include display-medium;
+  @include display-large;
+  @include headline-small;
+  @include headline-medium;
+  @include headline-large;
+  @include title-small;
+  @include title-medium;
+  @include title-large;
+  @include body-small;
+  @include body-medium;
+  @include body-large;
+  @include label-small;
+  @include label-medium;
+  @include label-large;
+}

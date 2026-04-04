@@ -4,6 +4,21 @@ import FilledButton from '../components/md/button/FilledButton.astro'
 ---
 
 <Layout>
+  <FilledButton size='small'>Content</FilledButton>
+  <FilledButton size='small' disabled>Content</FilledButton>
+
+  <br/>
+
+  <FilledButton size='medium'>Content</FilledButton>
+  <FilledButton size='medium' disabled>Content</FilledButton>
+
+  <br/>
+
+  <FilledButton size='large'>Content</FilledButton>
+  <FilledButton size='large' disabled>Content</FilledButton>
+
+  <hr/>
+
   <div class="md-typescale-display-large">Display Large</div>
   <div class="md-typescale-display-medium">Display Medium</div>
   <div class="md-typescale-display-small">Display Small</div>
@@ -59,27 +74,12 @@ import FilledButton from '../components/md/button/FilledButton.astro'
   <hr/>
 
   <div class="block corner-full">Full</div>
-
-  <hr/>
-
-  <FilledButton size='small'>Content</FilledButton>
-  <FilledButton size='small' disabled>Content</FilledButton>
-
-  <br/>
-
-  <FilledButton size='medium'>Content</FilledButton>
-  <FilledButton size='medium' disabled>Content</FilledButton>
-
-  <br/>
-
-  <FilledButton size='large'>Content</FilledButton>
-  <FilledButton size='large' disabled>Content</FilledButton>
 </Layout>
 
 <style lang="scss">
-  @use '../styles/md-colors';
-  @use '../styles/md-typescales';
-  @use '../styles/md-shapes';
+  @use '../styles/umdc/colors' as md-colors;
+  @use '../styles/umdc/typescales' as md-typescales;
+  @use '../styles/umdc/shapes' as md-shapes;
 
   div.block {
     width: 96px;
