@@ -3,7 +3,7 @@
 @use '../../shapes' as md-shapes;
 
 
-@mixin filled-colors {
+@mixin filled-color {
   --md-comp-button-filled-container-color: var(--md-sys-color-primary);
   --md-comp-button-filled-container-elevation: var(--md-sys-elevation-level0);
   --md-comp-button-filled-label-text-color: var(--md-sys-color-on-primary);
@@ -22,8 +22,58 @@
 
   --md-comp-button-filled-pressed-state-layer-color: var(--md-sys-color-on-primary);
   --md-comp-button-filled-pressed-state-layer-opacity: 0.1;
+
+}
+
+@mixin small-size {
+  --md-comp-button-small-container-height: 40px;
+  --md-comp-button-small-outlined-outline-width: 1px;
+
+  --md-comp-button-small-label-text-font: var(--md-ref-typeface-plain);
+  --md-comp-button-small-label-text-size: 14px;
+  --md-comp-button-small-label-text-line-height: 20px;
+  --md-comp-button-small-label-text-tracking: 0.1px;
+  --md-comp-button-small-label-text-weight: var(--md-ref-typeface-weight-medium);
+
+  --md-comp-button-small-container-shape-round-radius: calc(var(--md-comp-button-small-container-height) / 2);
+
+  --md-comp-button-small-leading-space: 16px;
+}
+
+@mixin medium-size {
+  --md-comp-button-medium-container-height: 56px;
+  --md-comp-button-medium-outlined-outline-width: 1px;
+
+  --md-comp-button-medium-label-text-font: var(--md-ref-typeface-plain);
+  --md-comp-button-medium-label-text-size: 16px;
+  --md-comp-button-medium-label-text-line-height: 24px;
+  --md-comp-button-medium-label-text-tracking: 0.15px;
+  --md-comp-button-medium-label-text-weight: var(--md-ref-typeface-weight-medium);
+
+  --md-comp-button-medium-container-shape-round-radius: calc(var(--md-comp-button-medium-container-height) / 2);
+
+  --md-comp-button-medium-leading-space: 24px;
+}
+
+@mixin large-size {
+  --md-comp-button-large-container-height: 96px;
+  --md-comp-button-large-outlined-outline-width: 1px;
+
+  --md-comp-button-large-label-text-font: var(--md-ref-typeface-plain);
+  --md-comp-button-large-label-text-size: 16px;
+  --md-comp-button-large-label-text-line-height: 32px;
+  --md-comp-button-large-label-text-tracking: 0;
+  --md-comp-button-large-label-text-weight: var(--md-ref-typeface-weight-regular);
+
+  --md-comp-button-large-container-shape-round-radius: calc(var(--md-comp-button-large-container-height) / 2);
+
+  --md-comp-button-large-leading-space: 48px;
 }
 
 @mixin all {
-  @include filled-colors;
+  @include filled-color;
+
+  @include small-size;
+  @include medium-size;
+  @include large-size;
 }
