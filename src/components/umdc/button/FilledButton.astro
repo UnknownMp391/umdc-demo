@@ -51,6 +51,8 @@ export interface Props {
     right: 0;
     bottom: 0;
 
+    @include md-transitions.button-state-layer;
+
     content: '';
   }
 
@@ -62,6 +64,8 @@ export interface Props {
   .button:active::before {
     background-color: var(--md-comp-button-filled-pressed-state-layer-color);
     opacity: var(--md-comp-button-filled-pressed-state-layer-opacity);
+
+    @include md-shapes.corner-small;
   }
 
   .small {
@@ -75,6 +79,10 @@ export interface Props {
     font-weight: var(--md-comp-button-small-label-text-weight);
 
     border-radius: var(--md-comp-button-small-container-shape-round-radius);
+
+    &::before {
+      border-radius: var(--md-comp-button-small-container-shape-round-radius);
+    }
   }
 
   .medium {
@@ -88,6 +96,10 @@ export interface Props {
     font-weight: var(--md-comp-button-medium-label-text-weight);
 
     border-radius: var(--md-comp-button-medium-container-shape-round-radius);
+
+    &::before {
+      border-radius: var(--md-comp-button-medium-container-shape-round-radius);
+    }
   }
 
   .large {
@@ -101,5 +113,9 @@ export interface Props {
     font-weight: var(--md-comp-button-large-label-text-weight);
 
     border-radius: var(--md-comp-button-large-container-shape-round-radius);
+
+    &::before {
+      border-radius: var(--md-comp-button-large-container-shape-round-radius);
+    }
   }
 </style>
