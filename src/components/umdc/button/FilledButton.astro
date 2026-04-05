@@ -35,8 +35,8 @@ export interface Props {
     &:disabled {
       pointer-events: none;
 
-      background-color: color-mix(in srgb, var(--md-sys-color-on-surface) 10%, transparent);
-      color: color-mix(in srgb, var(--md-sys-color-on-surface) 38%, transparent);
+      background-color: color-mix(in srgb, var(--md-comp-button-filled-disabled-container-color) var(--md-comp-button-filled-disabled-container-opacity), transparent);
+      color: color-mix(in srgb, var(--md-comp-button-filled-disabled-label-text-color) var(--md-comp-button-filled-disabled-label-text-opacity), transparent);
 
       &::before {
         display: none;
