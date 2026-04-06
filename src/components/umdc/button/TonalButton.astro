@@ -1,0 +1,121 @@
+---
+
+const { size = 'small' } = Astro.props;
+
+export interface Props {
+  size?: 'small' | 'medium' | 'large';
+  disabled?: boolean;
+}
+---
+<button class="button" class:list={[ size ]} {...Astro.props}>
+  <slot></slot>
+</button>
+
+<style lang="scss">
+  @use '../../../styles/umdc/colors' as md-colors;
+  @use '../../../styles/umdc/typescales' as md-typescales;
+  @use '../../../styles/umdc/shapes' as md-shapes;
+  @use '../../../styles/umdc/transitions' as md-transitions;
+
+  .button {
+    outline: 0;
+    border: 0px;
+    position: relative;
+
+    @include md-transitions.button;
+
+    color: var(--md-comp-button-tonal-label-text-color);
+    background-color: var(--md-comp-button-tonal-container-color);
+    box-shadow: var(--md-comp-button-tonal-container-elevation);
+
+    &:active {
+      @include md-shapes.corner-small;
+    }
+
+    &:disabled {
+      pointer-events: none;
+
+      background-color: color-mix(in srgb, var(--md-comp-button-tonal-disabled-container-color) var(--md-comp-button-tonal-disabled-container-opacity), transparent);
+      color: color-mix(in srgb, var(--md-comp-button-tonal-disabled-label-text-color) var(--md-comp-button-tonal-disabled-label-text-opacity), transparent);
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  .button::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    @include md-transitions.button-state-layer;
+
+    content: '';
+  }
+
+  .button:hover::before {
+    background-color: var(--md-comp-button-tonal-hovered-state-layer-color);
+    opacity: var(--md-comp-button-tonal-hovered-state-layer-opacity);
+  }
+
+  .button:active::before {
+    background-color: var(--md-comp-button-tonal-pressed-state-layer-color);
+    opacity: var(--md-comp-button-tonal-pressed-state-layer-opacity);
+
+    @include md-shapes.corner-small;
+  }
+
+  .small {
+    height: var(--md-comp-button-small-container-height);
+
+    padding: 0px var(--md-comp-button-small-leading-space) 0px var(--md-comp-button-small-leading-space);
+
+    font-size: var(--md-comp-button-small-label-text-size);
+    line-height: var(--md-comp-button-small-label-text-line-height);
+    letter-spacing: var(--md-comp-button-small-label-text-tracking);
+    font-weight: var(--md-comp-button-small-label-text-weight);
+
+    border-radius: var(--md-comp-button-small-container-shape-round-radius);
+
+    &::before {
+      border-radius: var(--md-comp-button-small-container-shape-round-radius);
+    }
+  }
+
+  .medium {
+    height: var(--md-comp-button-medium-container-height);
+
+    padding: 0px var(--md-comp-button-medium-leading-space) 0px var(--md-comp-button-medium-leading-space);
+
+    font-size: var(--md-comp-button-medium-label-text-size);
+    line-height: var(--md-comp-button-medium-label-text-line-height);
+    letter-spacing: var(--md-comp-button-medium-label-text-tracking);
+    font-weight: var(--md-comp-button-medium-label-text-weight);
+
+    border-radius: var(--md-comp-button-medium-container-shape-round-radius);
+
+    &::before {
+      border-radius: var(--md-comp-button-medium-container-shape-round-radius);
+    }
+  }
+
+  .large {
+    height: var(--md-comp-button-large-container-height);
+
+    padding: 0px var(--md-comp-button-large-leading-space) 0px var(--md-comp-button-large-leading-space);
+
+    font-size: var(--md-comp-button-large-label-text-size);
+    line-height: var(--md-comp-button-large-label-text-line-height);
+    letter-spacing: var(--md-comp-button-large-label-text-tracking);
+    font-weight: var(--md-comp-button-large-label-text-weight);
+
+    border-radius: var(--md-comp-button-large-container-shape-round-radius);
+
+    &::before {
+      border-radius: var(--md-comp-button-large-container-shape-round-radius);
+    }
+  }
+</style>

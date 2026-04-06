@@ -2,47 +2,6 @@
 @use '../../typescales' as md-typescales;
 @use '../../shapes' as md-shapes;
 
-
-@mixin filled-color {
-  --md-comp-button-filled-container-color: var(--md-sys-color-primary);
-  --md-comp-button-filled-container-elevation: var(--md-sys-elevation-level0);
-  --md-comp-button-filled-label-text-color: var(--md-sys-color-on-primary);
-
-  --md-comp-button-filled-disabled-container-color: var(--md-sys-color-on-surface);
-  --md-comp-button-filled-disabled-container-opacity: 10%;
-  --md-comp-button-filled-disabled-container-elevation: var(--md-sys-elevation-level0);
-  --md-comp-button-filled-disabled-label-text-color: var(--md-sys-color-on-surface);
-  --md-comp-button-filled-disabled-label-text-opacity: 38%;
-
-  --md-comp-button-filled-hovered-state-layer-color: var(--md-sys-color-on-primary);
-  --md-comp-button-filled-hovered-state-layer-opacity: 0.08;
-
-  --md-comp-button-filled-focused-state-layer-color: var(--md-sys-color-on-primary);
-  --md-comp-button-filled-focused-state-layer-opacity: 0.1;
-
-  --md-comp-button-filled-pressed-state-layer-color: var(--md-sys-color-on-primary);
-  --md-comp-button-filled-pressed-state-layer-opacity: 0.1;
-}
-
-@mixin outlined-color {
-  --md-comp-button-outlined-label-text-color: var(--md-sys-color-on-surface-variant);
-
-  --md-comp-button-outlined-disabled-container-color: var(--md-sys-color-on-surface);
-  --md-comp-button-outlined-disabled-container-opacity: 10%;
-  --md-comp-button-outlined-disabled-label-text-color: var(--md-sys-color-on-surface);
-  --md-comp-button-outlined-disabled-label-text-opacity: 38%;
-  --md-comp-button-outlined-disabled-outline-color: var(--md-sys-color-outline-variant);
-
-  --md-comp-button-outlined-hovered-state-layer-color: var(--md-sys-color-on-surface-variant);
-  --md-comp-button-outlined-hovered-state-layer-opacity: 0.08;
-
-  --md-comp-button-outlined-focused-state-layer-color: var(--md-sys-color-on-surface-variant);
-  --md-comp-button-outlined-focused-state-layer-opacity: 0.1;
-
-  --md-comp-button-outlined-pressed-state-layer-color: var(--md-sys-color-on-surface-variant);
-  --md-comp-button-outlined-pressed-state-layer-opacity: 0.1;
-}
-
 @mixin elevated-color {
   --md-comp-button-elevated-container-color: var(--md-sys-color-surface-container-low);
   --md-comp-button-elevated-container-elevation: var(--md-sys-elevation-level1);
@@ -68,6 +27,85 @@
   --md-comp-button-elevated-pressed-container-elevation: var(--md-sys-elevation-level2);
   --md-comp-button-elevated-pressed-state-layer-color: var(--md-sys-color-on-surface-variant);
   --md-comp-button-elevated-pressed-state-layer-opacity: 0.1;
+}
+
+@mixin filled-color {
+  --md-comp-button-filled-container-color: var(--md-sys-color-primary);
+  --md-comp-button-filled-container-elevation: var(--md-sys-elevation-level0);
+  --md-comp-button-filled-label-text-color: var(--md-sys-color-on-primary);
+
+  --md-comp-button-filled-disabled-container-color: var(--md-sys-color-on-surface);
+  --md-comp-button-filled-disabled-container-opacity: 10%;
+  --md-comp-button-filled-disabled-container-elevation: var(--md-sys-elevation-level0);
+  --md-comp-button-filled-disabled-label-text-color: var(--md-sys-color-on-surface);
+  --md-comp-button-filled-disabled-label-text-opacity: 38%;
+
+  --md-comp-button-filled-hovered-state-layer-color: var(--md-sys-color-on-primary);
+  --md-comp-button-filled-hovered-state-layer-opacity: 0.08;
+
+  --md-comp-button-filled-focused-state-layer-color: var(--md-sys-color-on-primary);
+  --md-comp-button-filled-focused-state-layer-opacity: 0.1;
+
+  --md-comp-button-filled-pressed-state-layer-color: var(--md-sys-color-on-primary);
+  --md-comp-button-filled-pressed-state-layer-opacity: 0.1;
+}
+
+@mixin tonal-color {
+  --md-comp-button-tonal-container-color: var(--md-sys-color-secondary-container);
+  --md-comp-button-tonal-container-elevation: var(--md-sys-elevation-level0);
+  --md-comp-button-tonal-label-text-color: var(--md-sys-color-on-secondary-container);
+
+  --md-comp-button-tonal-disabled-container-color: var(--md-sys-color-on-surface);
+  --md-comp-button-tonal-disabled-container-opacity: 10%;
+  --md-comp-button-tonal-disabled-container-elevation: var(--md-sys-elevation-level0);
+  --md-comp-button-tonal-disabled-label-text-color: var(--md-sys-color-on-surface);
+  --md-comp-button-tonal-disabled-label-text-opacity: 38%;
+
+  --md-comp-button-tonal-hovered-state-layer-color: var(--md-sys-color-on-secondary-container);
+  --md-comp-button-tonal-hovered-state-layer-opacity: 0.08;
+
+  --md-comp-button-tonal-focused-state-layer-color: var(--md-sys-color-on-secondary-container);
+  --md-comp-button-tonal-focused-state-layer-opacity: 0.1;
+
+  --md-comp-button-tonal-pressed-state-layer-color: var(--md-sys-color-on-secondary-container);
+  --md-comp-button-tonal-pressed-state-layer-opacity: 0.1;
+}
+
+@mixin outlined-color {
+  --md-comp-button-outlined-label-text-color: var(--md-sys-color-on-surface-variant);
+
+  --md-comp-button-outlined-disabled-container-color: var(--md-sys-color-on-surface);
+  --md-comp-button-outlined-disabled-container-opacity: 10%;
+  --md-comp-button-outlined-disabled-label-text-color: var(--md-sys-color-on-surface);
+  --md-comp-button-outlined-disabled-label-text-opacity: 38%;
+  --md-comp-button-outlined-disabled-outline-color: var(--md-sys-color-outline-variant);
+
+  --md-comp-button-outlined-hovered-state-layer-color: var(--md-sys-color-on-surface-variant);
+  --md-comp-button-outlined-hovered-state-layer-opacity: 0.08;
+
+  --md-comp-button-outlined-focused-state-layer-color: var(--md-sys-color-on-surface-variant);
+  --md-comp-button-outlined-focused-state-layer-opacity: 0.1;
+
+  --md-comp-button-outlined-pressed-state-layer-color: var(--md-sys-color-on-surface-variant);
+  --md-comp-button-outlined-pressed-state-layer-opacity: 0.1;
+}
+
+@mixin text-color {
+  --md-comp-button-text-label-text-color: var(--md-sys-color-primary);
+
+  --md-comp-button-text-disabled-container-color: var(--md-sys-color-on-surface);
+  --md-comp-button-text-disabled-container-opacity: 10%;
+  --md-comp-button-text-disabled-label-text-color: var(--md-sys-color-on-surface);
+  --md-comp-button-text-disabled-label-text-opacity: 38%;
+
+  --md-comp-button-text-hovered-state-layer-color: var(--md-sys-color-on-primary);
+  --md-comp-button-text-hovered-state-layer-opacity: 0.08;
+
+  --md-comp-button-text-focused-state-layer-color: var(--md-sys-color-on-primary);
+  --md-comp-button-text-focused-state-layer-opacity: 0.1;
+
+  --md-comp-button-text-pressed-state-layer-color: var(--md-sys-color-on-primary);
+  --md-comp-button-text-pressed-state-layer-opacity: 0.1;
 }
 
 @mixin small-size {
@@ -116,9 +154,11 @@
 }
 
 @mixin all {
-  @include filled-color;
-  @include outlined-color;
   @include elevated-color;
+  @include filled-color;
+  @include tonal-color;
+  @include outlined-color;
+  @include text-color;
 
   @include small-size;
   @include medium-size;

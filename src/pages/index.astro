@@ -4,9 +4,26 @@ import Layout from '../layouts/Layout.astro';
 import FilledButton from '../components/umdc/button/FilledButton.astro';
 import OutlinedButton from '../components/umdc/button/OutlinedButton.astro';
 import ElevatedButton from '../components/umdc/button/ElevatedButton.astro';
+import TonalButton from '../components/umdc/button/TonalButton.astro';
+import TextButton from '../components/umdc/button/TextButton.astro';
 ---
 
 <Layout>
+  <ElevatedButton size='small'>Content</ElevatedButton>
+  <ElevatedButton size='small' disabled>Content</ElevatedButton>
+
+  <br/>
+
+  <ElevatedButton size='medium'>Content</ElevatedButton>
+  <ElevatedButton size='medium' disabled>Content</ElevatedButton>
+
+  <br/>
+
+  <ElevatedButton size='large'>Content</ElevatedButton>
+  <ElevatedButton size='large' disabled>Content</ElevatedButton>
+
+  <br/>
+
   <FilledButton size='small'>Content</FilledButton>
   <FilledButton size='small' disabled>Content</FilledButton>
 
@@ -19,6 +36,21 @@ import ElevatedButton from '../components/umdc/button/ElevatedButton.astro';
 
   <FilledButton size='large'>Content</FilledButton>
   <FilledButton size='large' disabled>Content</FilledButton>
+
+  <br/>
+
+  <TonalButton size='small'>Content</TonalButton>
+  <TonalButton size='small' disabled>Content</TonalButton>
+
+  <br/>
+
+  <TonalButton size='medium'>Content</TonalButton>
+  <TonalButton size='medium' disabled>Content</TonalButton>
+
+  <br/>
+
+  <TonalButton size='large'>Content</TonalButton>
+  <TonalButton size='large' disabled>Content</TonalButton>
 
   <br/>
 
@@ -37,18 +69,30 @@ import ElevatedButton from '../components/umdc/button/ElevatedButton.astro';
 
   <br/>
 
-  <ElevatedButton size='small'>Content</ElevatedButton>
-  <ElevatedButton size='small' disabled>Content</ElevatedButton>
+  <TextButton size='small'>Content</TextButton>
+  <TextButton size='small' disabled>Content</TextButton>
 
   <br/>
 
-  <ElevatedButton size='medium'>Content</ElevatedButton>
-  <ElevatedButton size='medium' disabled>Content</ElevatedButton>
+  <TextButton size='medium'>Content</TextButton>
+  <TextButton size='medium' disabled>Content</TextButton>
 
   <br/>
 
-  <ElevatedButton size='large'>Content</ElevatedButton>
-  <ElevatedButton size='large' disabled>Content</ElevatedButton>
+  <TextButton size='large'>Content</TextButton>
+  <TextButton size='large' disabled>Content</TextButton>
+
+  <hr/>
+
+  <ElevatedButton>Content</ElevatedButton>
+  <br/>
+  <FilledButton>Content</FilledButton>
+  <br/>
+  <TonalButton>Content</TonalButton>
+  <br/>
+  <OutlinedButton>Content</OutlinedButton>
+  <br/>
+  <TextButton>Content</TextButton>
 
   <hr/>
 
