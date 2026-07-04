@@ -77,7 +77,7 @@ const darkSurfaceContainer = colors.dark.surfaceContainer
 const darkSurfaceContainerHigh = colors.dark.surfaceContainerHigh
 const darkSurfaceContainerHighest = colors.dark.surfaceContainerHighest
 
-import '../styles/umdc/classes/typescales.scss'
+import '../styles/classes/typescales.scss'
 ---
 
 <html>
@@ -170,10 +170,10 @@ import '../styles/umdc/classes/typescales.scss'
   lightSurfaceContainerHighest,
   darkSurfaceContainerHighest
 }}>
-@use '../styles/umdc/snippets' as md-snippets;
-@use '../styles/umdc/colors' as md-colors;
-@use '../styles/umdc/tokens/main' as md-tokens;
-@use '../styles/umdc/themes' as md-themes;
+@use '../styles/snippets' as md-snippets;
+@use '../styles/colors' as md-colors;
+@use '../styles/tokens/main' as md-tokens;
+@use '../styles/themes' as md-themes;
 
 html {
   @include md-snippets.color-vars-adapter-astro;

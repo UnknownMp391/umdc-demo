@@ -12,21 +12,22 @@ export interface Props {
 </button>
 
 <style lang="scss">
-  @use '../../../styles/umdc/colors' as md-colors;
-  @use '../../../styles/umdc/typescales' as md-typescales;
-  @use '../../../styles/umdc/shapes' as md-shapes;
-  @use '../../../styles/umdc/transitions' as md-transitions;
+  @use '../../styles/colors' as md-colors;
+  @use '../../styles/typescales' as md-typescales;
+  @use '../../styles/shapes' as md-shapes;
+  @use '../../styles/transitions' as md-transitions;
 
   .button {
     outline: 0;
-    border: 0px;
     position: relative;
 
     @include md-transitions.button;
 
-    color: var(--md-comp-button-elevated-label-text-color);
-    background-color: var(--md-comp-button-elevated-container-color);
-    box-shadow: var(--md-comp-button-elevated-container-elevation);
+    color: var(--md-comp-button-outlined-label-text-color);
+    background-color: transparent;
+    box-shadow: var(--md-comp-button-outlined-container-elevation);
+
+    border: var(--md-comp-button-small-outlined-outline-width) solid var(--md-comp-button-outlined-disabled-outline-color);
 
     &:active {
       @include md-shapes.corner-small;
@@ -35,10 +36,8 @@ export interface Props {
     &:disabled {
       pointer-events: none;
 
-      background-color: color-mix(in srgb, var(--md-comp-button-elevated-disabled-container-color) var(--md-comp-button-elevated-disabled-container-opacity), transparent);
-      color: color-mix(in srgb, var(--md-comp-button-elevated-disabled-label-text-color) var(--md-comp-button-elevated-disabled-label-text-opacity), transparent);
-
-      box-shadow: var(--md-comp-button-elevated-disabled-container-elevation);
+      background-color: color-mix(in srgb, var(--md-comp-button-outlined-disabled-container-color) var(--md-comp-button-outlined-disabled-container-opacity), transparent);
+      color: color-mix(in srgb, var(--md-comp-button-outlined-disabled-label-text-color) var(--md-comp-button-outlined-disabled-label-text-opacity), transparent);
 
       &::before {
         display: none;
@@ -59,19 +58,15 @@ export interface Props {
   }
 
   .button:hover::before {
-    background-color: var(--md-comp-button-elevated-hovered-state-layer-color);
-    opacity: var(--md-comp-button-elevated-hovered-state-layer-opacity);
-
-    box-shadow: var(--md-comp-button-elevated-hovered-container-elevation);
+    background-color: var(--md-comp-button-outlined-hovered-state-layer-color);
+    opacity: var(--md-comp-button-outlined-hovered-state-layer-opacity);
   }
 
   .button:active::before {
-    background-color: var(--md-comp-button-elevated-pressed-state-layer-color);
-    opacity: var(--md-comp-button-elevated-pressed-state-layer-opacity);
-
-    box-shadow: var(--md-comp-button-elevated-pressed-container-elevation);
-
     @include md-shapes.corner-small;
+
+    background-color: var(--md-comp-button-outlined-pressed-state-layer-color);
+    opacity: var(--md-comp-button-outlined-pressed-state-layer-opacity);
   }
 
   .small {

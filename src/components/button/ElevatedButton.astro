@@ -12,10 +12,10 @@ export interface Props {
 </button>
 
 <style lang="scss">
-  @use '../../../styles/umdc/colors' as md-colors;
-  @use '../../../styles/umdc/typescales' as md-typescales;
-  @use '../../../styles/umdc/shapes' as md-shapes;
-  @use '../../../styles/umdc/transitions' as md-transitions;
+  @use '../../styles/colors' as md-colors;
+  @use '../../styles/typescales' as md-typescales;
+  @use '../../styles/shapes' as md-shapes;
+  @use '../../styles/transitions' as md-transitions;
 
   .button {
     outline: 0;
@@ -24,9 +24,9 @@ export interface Props {
 
     @include md-transitions.button;
 
-    color: var(--md-comp-button-filled-label-text-color);
-    background-color: var(--md-comp-button-filled-container-color);
-    box-shadow: var(--md-comp-button-filled-container-elevation);
+    color: var(--md-comp-button-elevated-label-text-color);
+    background-color: var(--md-comp-button-elevated-container-color);
+    box-shadow: var(--md-comp-button-elevated-container-elevation);
 
     &:active {
       @include md-shapes.corner-small;
@@ -35,8 +35,10 @@ export interface Props {
     &:disabled {
       pointer-events: none;
 
-      background-color: color-mix(in srgb, var(--md-comp-button-filled-disabled-container-color) var(--md-comp-button-filled-disabled-container-opacity), transparent);
-      color: color-mix(in srgb, var(--md-comp-button-filled-disabled-label-text-color) var(--md-comp-button-filled-disabled-label-text-opacity), transparent);
+      background-color: color-mix(in srgb, var(--md-comp-button-elevated-disabled-container-color) var(--md-comp-button-elevated-disabled-container-opacity), transparent);
+      color: color-mix(in srgb, var(--md-comp-button-elevated-disabled-label-text-color) var(--md-comp-button-elevated-disabled-label-text-opacity), transparent);
+
+      box-shadow: var(--md-comp-button-elevated-disabled-container-elevation);
 
       &::before {
         display: none;
@@ -57,13 +59,17 @@ export interface Props {
   }
 
   .button:hover::before {
-    background-color: var(--md-comp-button-filled-hovered-state-layer-color);
-    opacity: var(--md-comp-button-filled-hovered-state-layer-opacity);
+    background-color: var(--md-comp-button-elevated-hovered-state-layer-color);
+    opacity: var(--md-comp-button-elevated-hovered-state-layer-opacity);
+
+    box-shadow: var(--md-comp-button-elevated-hovered-container-elevation);
   }
 
   .button:active::before {
-    background-color: var(--md-comp-button-filled-pressed-state-layer-color);
-    opacity: var(--md-comp-button-filled-pressed-state-layer-opacity);
+    background-color: var(--md-comp-button-elevated-pressed-state-layer-color);
+    opacity: var(--md-comp-button-elevated-pressed-state-layer-opacity);
+
+    box-shadow: var(--md-comp-button-elevated-pressed-container-elevation);
 
     @include md-shapes.corner-small;
   }
